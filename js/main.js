@@ -436,3 +436,44 @@ console.log("21. Convert in ASCII code upperCase char.");
 var cuvant = "D";
 var cuvantnou = cuvant.charCodeAt() + 32;
 console.log(String.fromCharCode(cuvantnou));
+console.log("-------------------------------");
+
+
+//22. Display prime numbers up to n.
+function displayNprimeNumbers(n){
+
+    for(let i=1;i<=n;i++){
+
+        let count = 0;
+        for(let j=1;j<=i;j++){
+            if(i % j == 0){
+                count++;
+            }
+        }
+        if(count == 2){
+            console.log(i);
+        }
+    }
+   
+}
+console.log("22.Display prime numbers up to n.");
+displayNprimeNumbers(10);
+console.log("-------------------------------");
+
+//23. Display number which is repeated for event times in an array
+function repeatInArr(arr){
+    let exist = {};
+    for(let i=0;i<arr.length;i++){
+        let element = arr[i];
+        if(exist[element]){
+            exist[element]++;
+        }else{
+            exist[element] = 1;
+        }
+    }
+    return exist
+}
+var ans23 = repeatInArr([1, 1, 3, 3, 4, 4, 4]);
+console.log("23. Display number which is repeated for event times in an array");
+console.log(ans23);
+console.log("-------------------------------");
