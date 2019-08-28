@@ -477,3 +477,82 @@ var ans23 = repeatInArr([1, 1, 3, 3, 4, 4, 4]);
 console.log("23. Display number which is repeated for event times in an array");
 console.log(ans23);
 console.log("-------------------------------");
+
+//24. count words in a Sentence.
+function countWords(sentence){
+    let arr = sentence.split(" ");
+    console.log(arr.length);
+}
+console.log("24. count words in a Sentence.");
+countWords("Ana are mere");
+console.log("-------------------------------");
+
+//25. In an integer array, there is 1 to 100 number, out of one is duplicate, how to find ?
+function findDuplicateNumber(arr){
+    let exist = {}
+    for(let i=0;i<arr.length;i++){
+        let element = arr[i];
+        if(exist[element]){
+            exist[element]++;
+        }else{
+            exist[element] = 1;
+        }
+    }
+    for(let i in exist){
+        if(exist[i] > 1){
+            console.log(i);
+        }
+    }
+}
+console.log("25. In an integer array, there is 1 to 100 number, out of one is duplicate, how to find ?");
+findDuplicateNumber([1, 2, 2, 3, 4, 4, 5]);
+console.log("-------------------------------");
+
+//26. implement substring of a string. also make it case sensitive
+function implementSubstring(str, start, finish){
+    if(start < 0){
+        start = 0;
+    }
+    if(finish > str.length){
+        finish = str.length;
+    }
+    let newStr = '';
+    for(let i=start;i<finish;i++){
+        newStr += str[i];
+    }
+    console.log(newStr);
+}
+console.log("26. implement substring of a string. also make it case sensitive");
+implementSubstring("Ana are mere", 2, 6);
+console.log("-------------------------------");
+
+
+//27. Find a square of a number. but you can only use addition or subtraction but no multiplication or division
+function squareBySum(num){
+    // formula = ( n^2 = 2*(sum(1->n))-n );
+    let sum = 0;
+    for(let i=1;i<=num;i++){
+        sum += i;
+    }
+    let square = 2 * sum - num;
+    console.log("square: " + square);
+}
+console.log("27. Find a square of a number. but you can only use addition or subtraction but no multiplication or division");
+squareBySum(6);
+console.log("-------------------------------");
+
+//28. From two sorted array how would you find common number?
+function checkMatchNumbers(arr1, arr2){
+    matchNumbers = [];
+    for(let i=0;i<arr1.length;i++){
+        if(arr1[i] == arr2[i]){
+            matchNumbers.push(arr1[i]);
+        }
+    }
+    console.log(matchNumbers);
+}
+
+console.log("28. From two sorted array how would you find common number?");
+checkMatchNumbers([1, 2, 3, 5, 9, 10], [1, 4, 8, 5]);
+console.log("-------------------------------");
+

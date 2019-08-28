@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iancu's drag n drop</title>
+    <title>Junior Interview Algorithm</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="js/main.js"></script>
@@ -17,6 +17,30 @@
         <h1>Junior Interview Algorithm</h1>
         <hr/>
         <li>1. Verify a prime number?</li>
+        <code style="color: blueviolet">
+            // 1. Verify a prime number? <br><br>
+            
+            function primeNumber(num){<br>
+            var divisor = 2;<br><br>
+            
+            while(num > divisor){<br>
+            if(num % divisor == 0){<br><br>
+            
+            return false;<br>
+            }else{<br>
+            divisor++;<br>
+            }<br>
+            }<br>
+            // console.log("yes");<br>
+            return true;<br><br>
+            
+            
+            }
+            console.log("Find all prime factors of a number?");<br>
+            var ans = primeNumber(137);<br>
+            console.log(ans);<br>
+            console.log("-------------------------------");<br>
+        </code><br>
         <li>2. Find all prime factors of a number?</li>
         <li>3. Get nth Fibonacci number?</li>
         <li>4. Find the greatest common divisor of two numbers?</li>
@@ -39,6 +63,10 @@
         <li>21. Convert in ASCII code upperCase char.</li>
         <li>22. Display prime numbers up to n.</li>
         <li>23. Display number which is repeated for event times in an array</li>
+        <li>24. Count words in a sentence.</li>
+        <li>25. In an integer array, there is 1 to 100 number, out of one is duplicate, how to find ?</li>
+        <li>26. Implement substring of a string. also make it case sensitive</li>
+        <li>27. Find a square of a number. but you can only use addition or subtraction but no multiplication or division</li>
     </div>
     
 
