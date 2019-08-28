@@ -556,3 +556,95 @@ console.log("28. From two sorted array how would you find common number?");
 checkMatchNumbers([1, 2, 3, 5, 9, 10], [1, 4, 8, 5]);
 console.log("-------------------------------");
 
+//29.1 Two ways to sort an integer array
+function sortArray1(arr){
+    
+    for(let i=0;i<arr.length;i++){
+        for(let j=0;j<i;j++){
+            if(arr[i] < arr[j]){
+                arr[j] = arr[j] - arr[i];
+                arr[i] = arr[i] + arr[j];
+                arr[j] = arr[i] - arr[j];
+            }
+        }
+    }
+    console.log(arr);
+}
+console.log("29.Two ways to sort an integer array");
+sortArray1([3, 4, 6, 2, 2, 1, 9, 3]);
+//29.2 using function sort();
+console.log("using function sort: ");
+console.log([3, 4, 6, 2, 2, 1, 9, 3].sort());
+console.log("-------------------------------");
+
+//30. Remove from array all odd numbers
+function removeOddsNumbers(arr){
+    
+    for(let i=0;i<arr.length;i++){
+        if(arr[i] % 2 != 0){
+            arr.splice(i, 1);
+            i--;
+        }
+        
+    }
+    console.log(arr);
+}
+console.log("30.Remove from array all odd numbers");
+removeOddsNumbers([1,1,1,101,1, 2, 2, 4, 5, 5]);
+console.log("-------------------------------");
+
+//31. Anagrams
+function anagram(word1, word2){
+    if(word1 === word2){
+        return true;
+    }
+    function sortString(str){
+        return str.toLowerCase().split('').sort().join('');
+    }
+   
+    return sortString(word1) === sortString(word2);
+}
+console.log("31.Anagrams");
+console.log(anagram('asd', 'asd'));
+console.log("-------------------------------");
+
+//32. FizzBuzz
+function fizzbuzz(n){
+    for(let i=1; i <= n ;i++){
+        if(i%3 === 0 && i % 5 === 0){
+            console.log("fizz-buzz ");
+        }else if( i%3 === 0){
+            console.log("fizz ");
+        }else if ( i%5 === 0){
+            console.log("buzz ");
+        }else{
+            console.log(i + " ");
+        }
+    }
+}
+console.log("32. Fizzbuzz");
+fizzbuzz(101);
+console.log("--------------------------------");
+
+window.onload = () => {
+
+    document.getElementById("buttonEx1").addEventListener("click", function (elem) {
+        
+        if(elem.toElement.style.width == "500px"){
+            elem.toElement.style.width = "initial";
+        }else{
+            elem.toElement.style.width = "500px";
+        }
+       
+    });
+
+    document.getElementById('ex2').addEventListener("click", function(elem) {
+        elem.toElement.style.backgroundColor = 'pink';
+    })
+
+    document.querySelector('[thisAttr="demo"]').style.width = "100px";
+    document.querySelector('[thisAttr="demo"]').style.height = "100px";
+    
+}
+
+
